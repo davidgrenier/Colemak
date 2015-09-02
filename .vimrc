@@ -22,3 +22,5 @@ syntax enable
 :noremap K N
 nmap H gT
 nmap I gt
+nnoremap <S-Tab> <<
+inoremap <S-Tab> <C-d>
