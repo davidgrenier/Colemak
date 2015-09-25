@@ -11,16 +11,26 @@ nmap <Leader>/ :nohl<CR>
 set ts=4
 set so=3
 syntax enable
-:noremap n j
-:noremap e k
-:noremap i l
-:noremap l i
-:noremap f e
-:noremap t f
-:noremap T F
-:noremap k n
-:noremap K N
+filetype plugin indent on
+set tabstop=4
+set shiftwidth=4
+set expandtab
+noremap n j
+noremap e k
+noremap I L
+noremap L I
+noremap i l
+noremap l i
+noremap f e
+noremap t f
+noremap T F
+noremap k n
+noremap K N
 nmap H gT
 nmap I gt
-nnoremap <S-Tab> <<
-inoremap <S-Tab> <C-d>
+inoremap <S-Tab> <C-D>
+if has("autocmd")
+	au BufReadPost *.rkt,*.rktl set filetype=racket
+	au filetype racket set lisp
+	au filetype racket set autoindent
+endif
