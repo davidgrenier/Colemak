@@ -24,7 +24,9 @@ noremap f e
 noremap t f
 noremap T F
 noremap k n
+noremap U <C-R>
 inoremap <S-Tab> <C-D>
+imap <C-BS> <C-W>
 if has("autocmd")
 	au BufReadPost *.rkt,*.rktl set filetype=racket
 	au filetype racket set lisp
