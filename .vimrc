@@ -17,7 +17,6 @@ set shiftwidth=4
 set expandtab
 noremap n j
 noremap e k
-noremap I L
 noremap L I
 noremap i l
 noremap l i
@@ -25,12 +24,13 @@ noremap f e
 noremap t f
 noremap T F
 noremap k n
-noremap K N
-nmap H gT
-nmap I gt
 inoremap <S-Tab> <C-D>
 if has("autocmd")
 	au BufReadPost *.rkt,*.rktl set filetype=racket
 	au filetype racket set lisp
 	au filetype racket set autoindent
+endif
+if has("win32")
+  cd /Users/David/Desktop
+  set guifont=Consolas:h11
 endif
