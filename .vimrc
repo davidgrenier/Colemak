@@ -1,4 +1,6 @@
 set nocompatible
+set diffopt+=context:99999
+set nofoldenable
 set autoindent
 set backspace=eol,start,indent
 set nobackup
