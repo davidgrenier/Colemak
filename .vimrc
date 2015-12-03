@@ -23,6 +23,8 @@ noremap f e
 noremap t f
 noremap T F
 noremap k n
+noremap K N
+vmap v <C-V>
 noremap U <C-R>
 inoremap <S-Tab> <C-D>
 imap <C-BS> <C-W>
@@ -32,6 +34,6 @@ if has("autocmd")
 	au filetype racket set autoindent
 endif
 if has("win32")
-  cd /Users/David/Desktop
+  cd ~\Desktop
   set guifont=Consolas:h11
 endif
