@@ -1,6 +1,9 @@
 set nocompatible
 filetype plugin on
 set hls
+set tabstop=4
+set shiftwidth=4
+set expandtab
 noremap n j
 noremap e k
 noremap L I

@@ -8,8 +8,7 @@ let mapleader = "\\"
 set ruler
 set rulerformat=%=%h%m%r%w\ %(%c%V%),%l/%L\ %P
 nmap <Leader>/ :nohl<CR>
-set ts=4
-set so=3
+set scrolloff=3
 syntax enable
 filetype plugin indent on
 set tabstop=4
