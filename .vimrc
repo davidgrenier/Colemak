@@ -34,6 +34,6 @@ if has("autocmd")
 	au filetype racket set autoindent
 endif
 if has("win32")
-  cd ~\Desktop
+  cd ~/Desktop
   set guifont=Consolas:h11
 endif
