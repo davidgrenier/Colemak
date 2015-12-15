@@ -37,3 +37,4 @@ if has("win32")
   cd ~/Desktop
   set guifont=Consolas:h11
 endif
+set history=100
