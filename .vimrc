@@ -4,7 +4,8 @@ set backspace=eol,start,indent
 set nobackup
 set incsearch
 set hlsearch
-let mapleader = "\\"
+let mapleader = "\<space>"
+set hidden
 set ruler
 set rulerformat=%=%h%m%r%w\ %(%c%V%),%l/%L\ %P
 nmap <Leader>/ :nohl<CR>
