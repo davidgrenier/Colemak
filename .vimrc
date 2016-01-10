@@ -16,6 +16,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set nowrap
+set splitbelow
 noremap n j
 noremap e k
 noremap L I
@@ -40,3 +41,5 @@ if has("win32")
   set guifont=Consolas:h11
 endif
 set history=100
+set nofoldenable
+execute pathogen#infect()
