@@ -1,22 +1,24 @@
+let mapleader = "\<space>"
 set nocompatible
 set autoindent
 set backspace=eol,start,indent
 set nobackup
 set incsearch
 set hlsearch
-let mapleader = "\<space>"
-set hidden
-set ruler
-set rulerformat=%=%h%m%r%w\ %(%c%V%),%l/%L\ %P
-nmap <Leader>/ :nohl<CR>
+set ruler rulerformat=%=%h%m%r%w\ %(%c%V%),%l/%L\ %P
 set scrolloff=3
-syntax enable
-filetype plugin indent on
 set tabstop=4
 set shiftwidth=4
 set expandtab
 set nowrap
 set splitbelow
+set history=100
+set nofoldenable
+nmap <Leader>/ :nohl<CR>
+syntax enable
+filetype plugin indent on
+vmap <leader>p :!runphp<cr>
+nnoremap <leader>b :ls<cr>:e #
 noremap n j
 noremap e k
 noremap L I
@@ -27,8 +29,8 @@ noremap t f
 noremap T F
 noremap k n
 noremap K N
-vmap v <C-V>
 noremap U <C-R>
+vmap v <C-V>
 inoremap <S-Tab> <C-D>
 imap <C-BS> <C-W>
 if has("autocmd")
@@ -40,6 +42,4 @@ if has("win32")
   cd ~/Desktop
   set guifont=Consolas:h11
 endif
-set history=100
-set nofoldenable
 execute pathogen#infect()
