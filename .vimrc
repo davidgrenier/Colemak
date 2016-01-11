@@ -17,7 +17,6 @@ set nofoldenable
 nmap <Leader>/ :nohl<CR>
 syntax enable
 filetype plugin indent on
-vmap <leader>p :!runphp<cr>
 nnoremap <leader>b :ls<cr>:e #
 noremap n j
 noremap e k
