@@ -2,6 +2,7 @@ let mapleader = "\<space>"
 map <Tab> <C-W>w
 map <S-Tab> <C-W>W
 set autochdir
+set autoread
 set nocompatible
 set autoindent
 set backspace=eol,start,indent
