@@ -1,4 +1,7 @@
 let mapleader = "\<space>"
+set autochdir
+map <Tab> <C-W>w:cd %:p:h<cr>:<cr>
+map <S-Tab> <C-W>W:cd %:p:h<cr>:<cr>
 set nocompatible
 set autoindent
 set backspace=eol,start,indent
@@ -38,7 +41,8 @@ if has("autocmd")
 	au filetype racket set autoindent
 endif
 if has("win32")
-  cd ~/Desktop
+  cd /Projects
   set guifont=Consolas:h11
 endif
 execute pathogen#infect()
+noremap <leader>sq :DBResultsClose<cr>
