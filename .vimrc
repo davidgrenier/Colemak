@@ -48,5 +48,4 @@ if has("win32")
 endif
 execute pathogen#infect()
 noremap <leader>sq :DBResultsClose<cr>
-autocmd FileType php setlocal shiftwidth=4 tabstop=4
 autocmd FileType html,css,js setlocal shiftwidth=2 tabstop=2
