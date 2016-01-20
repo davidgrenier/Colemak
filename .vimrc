@@ -48,3 +48,4 @@ if has("win32")
 endif
 execute pathogen#infect()
 noremap <leader>sq :DBResultsClose<cr>
+nnoremap <leader>bc :execute ':silent !chrome %'<cr>
