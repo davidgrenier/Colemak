@@ -48,4 +48,4 @@ if has("win32")
 endif
 execute pathogen#infect()
 noremap <leader>sq :DBResultsClose<cr>
-autocmd FileType html,css,js setlocal shiftwidth=2 tabstop=2
+nnoremap <leader>bc :execute ':silent !chrome %'<cr>
