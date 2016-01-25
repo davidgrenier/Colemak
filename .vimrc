@@ -45,6 +45,7 @@ if has("win32")
   cd /Projects
   set guifont=Consolas:h11
   "set shell=\Program\ Files\Git\bin\bash
+    set directory=~/vimfiles/swapfiles//
 endif
 execute pathogen#infect()
 noremap <leader>sq :DBResultsClose<cr>
