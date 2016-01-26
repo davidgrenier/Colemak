@@ -1,6 +1,4 @@
 let mapleader = "\<space>"
-map <Tab> <C-W>w
-map <S-Tab> <C-W>W
 set autochdir
 set autoread
 set nocompatible
@@ -21,7 +19,6 @@ set nofoldenable
 nmap <Leader>/ :nohl<CR>
 syntax enable
 filetype plugin indent on
-nnoremap <leader>b :ls<cr>:e #
 noremap n j
 noremap e k
 noremap L I
@@ -49,4 +46,6 @@ if has("win32")
 endif
 execute pathogen#infect()
 noremap <leader>sq :DBResultsClose<cr>
+nnoremap <leader>b :ls<cr>:e #
 nnoremap <leader>bc :execute ':silent !chrome %'<cr>
+nnoremap <leader><leader> <C-W>w
