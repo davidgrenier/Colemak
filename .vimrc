@@ -44,6 +44,9 @@ if has("win32")
   "set shell=\Program\ Files\Git\bin\bash
     set directory=~/vimfiles/swapfiles//
 endif
+if has("gui_running")
+    set go-=m go-=T go-=r go-=L
+endif
 execute pathogen#infect()
 noremap <leader>sq :DBResultsClose<cr>
 nnoremap <leader>b :ls<cr>:e #
