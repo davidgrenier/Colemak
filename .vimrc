@@ -1,7 +1,7 @@
+set nocompatible
 let mapleader = "\<space>"
 set autochdir
 set autoread
-set nocompatible
 set autoindent
 set backspace=eol,start,indent
 set nobackup
