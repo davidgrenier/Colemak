@@ -10,3 +10,4 @@ hi Identifier guifg=#005060
 hi Special guifg=black
 hi Delimiter guifg=black
 hi Normal guibg=#d0d0c0
+hi Visual guibg=#a0a0c0
