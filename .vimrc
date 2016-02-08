@@ -7,7 +7,7 @@ set backspace=eol,start,indent
 set nobackup
 set incsearch
 set hlsearch
-set ruler rulerformat=%=%h%m%r%w\ %(%c%V%),%l/%L\ %P
+set ruler rulerformat=%=%h%m%r%w\ c%(%c%V%)\ %l/%L
 set scrolloff=3
 set tabstop=4
 set shiftwidth=4
