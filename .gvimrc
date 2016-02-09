@@ -4,7 +4,7 @@ hi PreProc guifg=blue gui=none
 hi String guifg=#a04020
 hi Constant guifg=#0000a0
 hi Title guifg=#0000a0 gui=none
-hi Comment guifg=#d09090
+hi Comment guifg=#c06880
 hi Type gui=none guifg=#008050
 hi Identifier guifg=#005060
 hi Special guifg=black
