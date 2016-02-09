@@ -1,7 +1,7 @@
 set background=light
 hi Statement guifg=#508000 gui=none
 hi PreProc guifg=blue gui=none
-hi String guifg=#a04020
+hi String guifg=#a31515
 hi Constant guifg=#0000a0
 hi Title guifg=#0000a0 gui=none
 hi Comment guifg=#c06880
