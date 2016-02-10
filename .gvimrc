@@ -9,6 +9,6 @@ hi Type gui=none guifg=#008050
 hi Identifier guifg=#005060
 hi Special guifg=black
 hi Delimiter guifg=black
-hi Normal guibg=#d0d0c0
+hi Normal guibg=#cbc5a5
 hi MatchParen gui=underline,bold guibg=#d0d0c0
 hi Visual guibg=#a0a0c0
