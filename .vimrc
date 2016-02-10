@@ -54,3 +54,4 @@ noremap <leader>sq :DBResultsClose<cr>
 nnoremap <leader>b :ls<cr>:e #
 nnoremap <leader>bc :execute ':silent !chrome %'<cr>
 nnoremap <leader><leader> <C-W>w
+set laststatus=2
