@@ -32,6 +32,7 @@ noremap T F
 noremap k n
 noremap K N
 noremap U <C-R>
+nmap <leader><cr> <C-]>
 vmap v <C-V>
 inoremap <S-Tab> <C-D>
 imap <C-BS> <C-W>
