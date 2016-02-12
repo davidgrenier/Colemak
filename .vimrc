@@ -33,6 +33,11 @@ noremap T F
 noremap k n
 noremap K N
 noremap U <C-R>
+noremap <C-j> <C-^>
+nnoremap <silent> [b :bprevious<cr>
+nnoremap <silent> ]b :bnext<cr>
+nnoremap <silent> [a :prev<cr>
+nnoremap <silent> ]a :next<cr>
 nmap <leader><cr> <C-]>
 vmap v <C-V>
 inoremap <S-Tab> <C-D>
