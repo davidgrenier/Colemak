@@ -60,5 +60,6 @@ execute pathogen#infect()
 noremap <leader>sq :DBResultsClose<cr>
 nnoremap <leader>b :ls<cr>:e #
 nnoremap <leader>bc :execute ':silent !chrome %'<cr>
-nnoremap <leader><leader> <C-W>w
+nnoremap <leader>n <C-W>w
+nnoremap <leader>e <C-W>W
 set laststatus=2
