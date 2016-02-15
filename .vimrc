@@ -1,7 +1,6 @@
 set nocompatible
 let mapleader = "\<space>"
 "set autochdir
-autocmd BufEnter * lcd %:p:h
 set autoread
 set autoindent
 set backspace=eol,start,indent
