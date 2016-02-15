@@ -38,6 +38,10 @@ nnoremap <silent> [b :bprevious<cr>
 nnoremap <silent> ]b :bnext<cr>
 nnoremap <silent> [a :prev<cr>
 nnoremap <silent> ]a :next<cr>
+nnoremap <silent> [q :cprev<cr>
+nnoremap <silent> ]q :cnext<cr>
+nnoremap <silent> [Q :cfirst<cr>
+nnoremap <silent> ]Q :clast<cr>
 nmap <leader><cr> <C-]>
 vmap v <C-V>
 inoremap <S-Tab> <C-D>
