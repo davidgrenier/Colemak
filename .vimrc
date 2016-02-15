@@ -55,6 +55,7 @@ if has("win32")
 endif
 if has("gui_running")
     set go-=m go-=T go-=r go-=L
+    au GUIEnter * simalt ~x
 endif
 execute pathogen#infect()
 noremap <leader>sq :DBResultsClose<cr>
