@@ -33,10 +33,16 @@ noremap k n
 noremap K N
 noremap U <C-R>
 noremap <C-j> <C-^>
+nnoremap <leader>H <c-w>H
+nnoremap <leader>N <c-w>J
+nnoremap <leader>E <c-w>K
+nnoremap <leader>I <c-w>L
 nnoremap <silent> [b :bprevious<cr>
 nnoremap <silent> ]b :bnext<cr>
-nnoremap <silent> [a :prev<cr>
-nnoremap <silent> ]a :next<cr>
+nnoremap <silent> [a :first<cr>
+nnoremap <silent> ]a :last<cr>
+nnoremap <silent> [à :prev<cr>
+nnoremap <silent> ]à :next<cr>
 nnoremap <silent> [q :cprev<cr>
 nnoremap <silent> ]q :cnext<cr>
 nnoremap <silent> [Q :cfirst<cr>
