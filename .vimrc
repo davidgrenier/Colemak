@@ -47,6 +47,8 @@ nnoremap <silent> [q :cprev<cr>
 nnoremap <silent> ]q :cnext<cr>
 nnoremap <silent> [Q :cfirst<cr>
 nnoremap <silent> ]Q :clast<cr>
+noremap ' `
+noremap ` '
 nmap <leader><cr> <C-]>
 vmap v <C-V>
 inoremap <S-Tab> <C-D>
