@@ -19,7 +19,7 @@ set nofoldenable
 nmap <Leader>/ :nohl<CR>
 syntax enable
 filetype plugin indent on
-let g:html_indent_inctags = "html,body,head,tbody,li"
+let g:html_indent_inctags = "html,body,head,tbody,p,li"
 au BufNewFile,BufRead *.volt,*.phtml set filetype=html
 noremap n j
 noremap e k
@@ -47,6 +47,8 @@ nnoremap <silent> [q :cprev<cr>
 nnoremap <silent> ]q :cnext<cr>
 nnoremap <silent> [Q :cfirst<cr>
 nnoremap <silent> ]Q :clast<cr>
+noremap ' `
+noremap ` '
 nmap <leader><cr> <C-]>
 vmap v <C-V>
 inoremap <S-Tab> <C-D>
