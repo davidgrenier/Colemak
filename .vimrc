@@ -19,8 +19,8 @@ set nofoldenable
 nmap <Leader>/ :nohl<CR>
 syntax enable
 filetype plugin indent on
-let g:html_indent_inctags = "html,body,head,tbody"
-au BufNewFile,BufRead *.volt set filetype=html
+let g:html_indent_inctags = "html,body,head,tbody,li"
+au BufNewFile,BufRead *.volt,*.phtml set filetype=html
 noremap n j
 noremap e k
 noremap L I
@@ -68,8 +68,11 @@ if has("gui_running")
 endif
 execute pathogen#infect()
 noremap <leader>sq :DBResultsClose<cr>
+noremap <leader>ssp :silent !net stop MySQL57<cr>
+noremap <leader>sst :silent !net start MySQL57<cr>
 nnoremap <leader>b :ls<cr>:e #
-nnoremap <leader>bc :execute ':silent !chrome %'<cr>
+nnoremap <leader>bc :silent !chrome %<cr>
 nnoremap <leader>n <C-W>w
 nnoremap <leader>e <C-W>W
 set laststatus=2
+set previewheight=20
