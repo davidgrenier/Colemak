@@ -49,6 +49,7 @@ nnoremap <silent> [Q :cfirst<cr>
 nnoremap <silent> ]Q :clast<cr>
 noremap ' `
 noremap ` '
+cabbrev E Explore
 nmap <leader><cr> <C-]>
 vmap v <C-V>
 inoremap <S-Tab> <C-D>
@@ -78,3 +79,4 @@ nnoremap <leader>n <C-W>w
 nnoremap <leader>e <C-W>W
 set laststatus=2
 set previewheight=20
+set shortmess+=I
