@@ -29,8 +29,8 @@ noremap l i
 noremap f e
 noremap t f
 noremap T F
-noremap k n
-noremap K N
+"noremap k n
+"noremap K N
 noremap U <C-R>
 noremap <C-j> <C-^>
 nnoremap <leader>H <c-w>H
