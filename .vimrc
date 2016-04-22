@@ -80,3 +80,4 @@ nnoremap <leader>e <C-W>W
 set laststatus=2
 set previewheight=20
 set shortmess+=I
+
