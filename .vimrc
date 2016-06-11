@@ -81,4 +81,3 @@ set laststatus=2
 set previewheight=20
 let g:dbext_default_buffer_lines = 20
 set shortmess+=I
-
