@@ -77,7 +77,12 @@ nnoremap <leader>b :ls<cr>:e #
 nnoremap <leader>bc :silent !chrome %<cr>
 nnoremap <leader>n <C-W>w
 nnoremap <leader>e <C-W>W
+noremap <silent> <expr> ' "'".toupper(nr2char(getchar()))
+noremap <silent> <expr> m "m".toupper(nr2char(getchar()))
+sunmap '
+sunmap m
 set laststatus=2
 set previewheight=20
 let g:dbext_default_buffer_lines = 20
 set shortmess+=I
+set encoding=utf-8
