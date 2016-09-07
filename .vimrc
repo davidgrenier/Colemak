@@ -60,9 +60,7 @@ if has("autocmd")
 	au filetype racket set autoindent
 endif
 if has("win32")
-  cd /Projects
-  set guifont=Consolas:h11
-  "set shell=\Program\ Files\Git\bin\bash
+    cd /Projects
     set directory=~/vimfiles/swapfiles//
 endif
 if has("gui_running")
@@ -73,7 +71,6 @@ execute pathogen#infect()
 noremap <leader>sq :DBResultsClose<cr>
 noremap <leader>ssp :silent !net stop MySQL57<cr>
 noremap <leader>sst :silent !net start MySQL57<cr>
-nnoremap <leader>b :ls<cr>:e #
 nnoremap <leader>bc :silent !chrome %<cr>
 nnoremap <leader>n <C-W>w
 nnoremap <leader>e <C-W>W
@@ -84,5 +81,14 @@ sunmap m
 set laststatus=2
 set previewheight=20
 let g:dbext_default_buffer_lines = 20
+let g:dbext_default_SQLSRV_bin = "sqlcmd"
+let g:dbext_default_SQLSRV_cmd_options = '-w 10000'
+let g:dbext_default_history_file = 'c:\Users\dgrenier\vimfiles\dbext_sql_history.txt'
 set shortmess+=I
 set encoding=utf-8
+
+augroup omnisharp_commands
+    au!
+    au BufWritePost *.cs call OmniSharp#AddToProject()
+    au BufWritePost *.cs :OmniSharpBuildAsync
+augroup END

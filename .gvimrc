@@ -12,3 +12,4 @@ hi Delimiter guifg=black
 hi Normal guibg=#cbc5a5
 hi MatchParen gui=underline,bold guibg=#d0d0c0
 hi Visual guibg=#a0a0c0
+set guifont=Consolas:h11
