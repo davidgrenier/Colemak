@@ -86,9 +86,7 @@ let g:dbext_default_SQLSRV_cmd_options = '-w 10000'
 let g:dbext_default_history_file = 'c:\Users\dgrenier\vimfiles\dbext_sql_history.txt'
 set shortmess+=I
 set encoding=utf-8
+set diffopt+=iwhite
 
-augroup omnisharp_commands
-    au!
-    au BufWritePost *.cs call OmniSharp#AddToProject()
-    au BufWritePost *.cs :OmniSharpBuildAsync
-augroup END
+set makeprg=msbuild\ /nologo\ /v:q
+set errorformat=\ %#%f(%l\\\,%c):\ %m
