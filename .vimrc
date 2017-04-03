@@ -1,5 +1,6 @@
 set nocompatible
 let mapleader = "\<space>"
+let maplocalleader = "\<space>"
 "set autochdir
 set autoread
 set autoindent
