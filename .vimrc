@@ -22,6 +22,7 @@ syntax enable
 filetype plugin indent on
 let g:html_indent_inctags = "html,body,head,tbody,p,li"
 au BufNewFile,BufRead *.volt,*.phtml set filetype=html
+au BufNewFile,BufRead *.tex set filetype=tex
 noremap n j
 noremap e k
 noremap L I
@@ -88,6 +89,6 @@ let g:dbext_default_history_file = 'c:\Users\dgrenier\vimfiles\dbext_sql_history
 set shortmess+=I
 set encoding=utf-8
 set diffopt+=iwhite
-
+autocmd BufRead,BufNewFile *.wat set filetype=webassembly
 set makeprg=msbuild\ /nologo\ /v:q
 set errorformat=\ %#%f(%l\\\,%c):\ %m
