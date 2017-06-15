@@ -90,5 +90,4 @@ set shortmess+=I
 set encoding=utf-8
 set diffopt+=iwhite
 autocmd BufRead,BufNewFile *.wat set filetype=webassembly
-set makeprg=msbuild\ /nologo\ /v:q
 set errorformat=\ %#%f(%l\\\,%c):\ %m
