@@ -828,6 +828,8 @@ xkb_symbols "colemax" {
     key <AB08> { [        comma,    semicolon,    dead_cedilla,       asciitilde ] };
     key <AB09> { [       period,        colon,   dead_abovedot,       asciitilde ] };
 
+    key <CAPS> { [    Caps_Lock,    Caps_Lock,       Caps_Lock,        Caps_Lock ] };
+
     include "level3(ralt_switch)"
 };
 
