@@ -807,6 +807,8 @@ xkb_symbols "colemax" {
     include "us(colemak)"
     name[Group1]= "English (Colemax)";
 
+    key <AE06> { [            6, dead_circumflex,         hstroke,          Hstroke ] };
+
     key <AD03> { [            f,            F,       braceleft,           Atilde ] };
     key <AD04> { [            p,            P,      braceright,         Ooblique ] };
     key <AD08> { [            u,            U,           U00F9,            U00D9 ] };
