@@ -26,6 +26,7 @@ au BufNewFile,BufRead *.volt,*.phtml set filetype=html
 au BufNewFile,BufRead *.tex set filetype=tex
 au BufNewFile,BufRead *.ly set filetype=ly syntax=tex
 au FileType ly setlocal commentstring=%\ %s
+au FileType r setlocal commentstring=#\ %s
 noremap n j
 noremap e k
 noremap L I
@@ -76,7 +77,9 @@ endif
 if has("gui_running")
     imap <C-BS> <C-W>
     set go-=m go-=T go-=r go-=L
-    "au GUIEnter * simalt ~x
+    if has("win32")
+        au GUIEnter * simalt ~x
+    endif
 else
     noremap! <C-BS> <C-w>
     noremap! <C-h> <C-w>
