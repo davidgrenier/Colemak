@@ -828,7 +828,7 @@ xkb_symbols "colemax" {
     key <AB03> { [            c,            C,           U00E7,            U00C7 ] };
     key <AB04> { [            v,            V,         greater,               OE ] };
     key <AB08> { [        comma,    semicolon,    dead_cedilla,       asciitilde ] };
-    key <AB09> { [       period,        colon,   dead_abovedot,       asciitilde ] };
+    key <AB09> { [       period,        colon,  dead_diaeresis,       asciitilde ] };
 
     key <CAPS> { [    Caps_Lock,    Caps_Lock,       Caps_Lock,        Caps_Lock ] };
 

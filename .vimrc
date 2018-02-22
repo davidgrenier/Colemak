@@ -1,3 +1,4 @@
+" set number
 set nocompatible
 let mapleader = "\<space>"
 let maplocalleader = "\<space>"
@@ -23,6 +24,8 @@ filetype plugin indent on
 let g:html_indent_inctags = "html,body,head,tbody,p,li"
 au BufNewFile,BufRead *.volt,*.phtml set filetype=html
 au BufNewFile,BufRead *.tex set filetype=tex
+au BufNewFile,BufRead *.ly set filetype=ly syntax=tex
+au FileType ly setlocal commentstring=%\ %s
 noremap n j
 noremap e k
 noremap L I
@@ -33,8 +36,7 @@ noremap t f
 noremap T F
 noremap k n
 noremap K N
-noremap U <C-R>
-noremap <C-j> <C-^>
+nnoremap U <C-R>
 nnoremap <leader>H <c-w>H
 nnoremap <leader>N <c-w>J
 nnoremap <leader>E <c-w>K
@@ -55,19 +57,29 @@ cabbrev E Explore
 nmap <leader><cr> <C-]>
 vmap v <C-V>
 inoremap <S-Tab> <C-D>
-imap <C-BS> <C-W>
 if has("autocmd")
 	au BufReadPost *.rkt,*.rktl set filetype=racket
 	au filetype racket set lisp
 	au filetype racket set autoindent
 endif
 if has("win32")
-    cd /Projects
+    nnoremap <C-j> <C-^>
+    cd /projects
     set directory=~/vimfiles/swapfiles//
+else
+    nnoremap <C-n> <C-^>
+    nnoremap <C-y> <C-o>
+    nnoremap <C-l> <C-i>
+    cd ~/projects
+    set directory=~/.vim/swapfiles//
 endif
 if has("gui_running")
+    imap <C-BS> <C-W>
     set go-=m go-=T go-=r go-=L
-    au GUIEnter * simalt ~x
+    "au GUIEnter * simalt ~x
+else
+    noremap! <C-BS> <C-w>
+    noremap! <C-h> <C-w>
 endif
 execute pathogen#infect()
 noremap <leader>sq :DBResultsClose<cr>
@@ -91,3 +103,4 @@ set encoding=utf-8
 set diffopt+=iwhite
 autocmd BufRead,BufNewFile *.wat set filetype=webassembly
 set errorformat=\ %#%f(%l\\\,%c):\ %m
+hi MatchParen cterm=underline ctermbg=none ctermfg=none
