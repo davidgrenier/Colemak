@@ -101,6 +101,13 @@ let g:dbext_default_history_file = 'c:\Users\dgrenier\vimfiles\dbext_sql_history
 set shortmess+=I
 set encoding=utf-8
 set diffopt+=iwhite
-autocmd BufRead,BufNewFile *.wat set filetype=webassembly
 set errorformat=\ %#%f(%l\\\,%c):\ %m
 hi MatchParen cterm=underline ctermbg=none ctermfg=none
+vmap <C-e> :<C-u>@*<CR>
+ca sh term
+hi StatusLine ctermbg=121 ctermfg=DarkGray
+hi StatusLineNC ctermbg=Black ctermfg=DarkGray
+set fillchars+=vert:\ 
+hi VertSplit ctermfg=DarkGray
+set grepprg=ag\ --vimgrep\ $*
+set grepformat=%f:%l:%c:%m
