@@ -1,18 +1,13 @@
-" set number
-set nocompatible
 let mapleader = "\<space>"
 let maplocalleader = "\<space>"
-"set autochdir
+set nocompatible
 set autoread
 set autoindent
 set backspace=eol,start,indent
 set nobackup
-set incsearch
-set hlsearch
-set ruler rulerformat=%=%h%m%r%w\ c%(%c%V%)\ %l/%L
-set scrolloff=3
-set tabstop=4
-set shiftwidth=4
+set incsearch hlsearch
+set ruler rulerformat=%=%h%m%r%w\ %(%c%V%)\ @\ %l/%L
+set scrolloff=3 tabstop=4 shiftwidth=4
 set expandtab
 set nowrap
 set splitbelow
@@ -22,11 +17,12 @@ nmap <Leader>/ :nohl<CR>
 syntax enable
 filetype plugin indent on
 let g:html_indent_inctags = "html,body,head,tbody,p,li"
-au BufNewFile,BufRead *.volt,*.phtml set filetype=html
 au BufNewFile,BufRead *.tex set filetype=tex
 au BufNewFile,BufRead *.ly set filetype=ly syntax=tex
 au FileType ly setlocal commentstring=%\ %s
 au FileType r setlocal commentstring=#\ %s
+au FileType matlab setlocal commentstring=%\ %s
+au FileType fsharp setlocal commentstring=//\ %s
 noremap n j
 noremap e k
 noremap L I
@@ -107,10 +103,8 @@ set diffopt+=iwhite
 set errorformat=\ %#%f(%l\\\,%c):\ %m
 hi MatchParen cterm=underline ctermbg=none ctermfg=none
 vmap <C-e> :<C-u>@*<CR>
-ca sh term
-hi StatusLine ctermbg=121 ctermfg=DarkGray
-hi StatusLineNC ctermbg=Black ctermfg=DarkGray
+colorscheme apprentice
 set fillchars+=vert:\ 
-hi VertSplit ctermfg=DarkGray
+hi VertSplit ctermfg=8
 set grepprg=ag\ --vimgrep\ $*
 set grepformat=%f:%l:%c:%m
