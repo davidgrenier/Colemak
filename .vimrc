@@ -23,6 +23,7 @@ au FileType ly setlocal commentstring=%\ %s
 au FileType r setlocal commentstring=#\ %s
 au FileType matlab setlocal commentstring=%\ %s
 au FileType fsharp setlocal commentstring=//\ %s
+au FileType c setlocal commentstring=//\ %s
 noremap n j
 noremap e k
 noremap L I
