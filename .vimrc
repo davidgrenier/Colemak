@@ -26,6 +26,8 @@ au FileType fsharp setlocal commentstring=//\ %s
 au FileType c setlocal commentstring=//\ %s
 noremap n j
 noremap e k
+" noremap <c-n> <c-f>
+" noremap <c-e> <c-b>
 noremap L I
 noremap i l
 noremap l i
@@ -109,3 +111,5 @@ set fillchars+=vert:\
 hi VertSplit ctermfg=8
 set grepprg=ag\ --vimgrep\ $*
 set grepformat=%f:%l:%c:%m
+au CursorHold,CursorHoldI * checktime
+au FocusGained,BufEnter * checktime
