@@ -4,11 +4,11 @@ set nocompatible
 set autoread
 set autoindent
 set backspace=eol,start,indent
-set nobackup
 set incsearch hlsearch
+set nobackup
 set ruler rulerformat=%=%h%m%r%w\ %(%c%V%)\ @\ %l/%L
-set scrolloff=3 tabstop=4 shiftwidth=4
-set expandtab
+set scrolloff=3 tabstop=4 shiftwidth=4 expandtab
+set tw=90
 set nowrap
 set splitbelow
 set history=100
@@ -19,11 +19,20 @@ filetype plugin indent on
 let g:html_indent_inctags = "html,body,head,tbody,p,li"
 au BufNewFile,BufRead *.tex set filetype=tex
 au BufNewFile,BufRead *.ly set filetype=ly syntax=tex
+au BufNewFile,BufRead *.idr set filetype=idris
+au BufNewFile,BufRead *.jl set filetype=julia
+au BufNewFile,BufRead *.wl set filetype=mathematica
+au BufNewFile,BufRead *.prolog set filetype=prolog
+au BufNewFile,BufRead *.fs set filetype=fsharp
+au FileType prolog setlocal commentstring=%\ %s
 au FileType ly setlocal commentstring=%\ %s
 au FileType r setlocal commentstring=#\ %s
+au FileType julia setlocal commentstring=#\ %s
 au FileType matlab setlocal commentstring=%\ %s
 au FileType fsharp setlocal commentstring=//\ %s
 au FileType c setlocal commentstring=//\ %s
+au FileType idris setlocal commentstring=--\ %s
+au FileType mathematica setlocal commentstring=(*\ %s\ *)
 noremap n j
 noremap e k
 " noremap <c-n> <c-f>
@@ -36,11 +45,13 @@ noremap t f
 noremap T F
 noremap k n
 noremap K N
+noremap N K
 nnoremap U <C-R>
 nnoremap <leader>H <c-w>H
 nnoremap <leader>N <c-w>J
 nnoremap <leader>E <c-w>K
 nnoremap <leader>I <c-w>L
+nnoremap <leader>lt :UndotreeToggle<cr>
 nnoremap <silent> [b :bprevious<cr>
 nnoremap <silent> ]b :bnext<cr>
 nnoremap <silent> [a :first<cr>
@@ -83,11 +94,9 @@ else
     noremap! <C-BS> <C-w>
     noremap! <C-h> <C-w>
 endif
-execute pathogen#infect()
 noremap <leader>sq :DBResultsClose<cr>
 noremap <leader>ssp :silent !net stop MySQL57<cr>
 noremap <leader>sst :silent !net start MySQL57<cr>
-nnoremap <leader>bc :silent !chrome %<cr>
 nnoremap <leader>n <C-W>w
 nnoremap <leader>e <C-W>W
 noremap <silent> <expr> ' "'".toupper(nr2char(getchar()))
@@ -111,5 +120,16 @@ set fillchars+=vert:\
 hi VertSplit ctermfg=8
 set grepprg=ag\ --vimgrep\ $*
 set grepformat=%f:%l:%c:%m
-au CursorHold,CursorHoldI * checktime
-au FocusGained,BufEnter * checktime
+au CursorHold,CursorHoldI,FocusGained * silent! checktime
+" au BufEnter * checktime if mode() != 'c' | checktime | endif
+let g:netrw_keepdir = 0
+let g:netrw_localcopydircmd = 'cp -r'
+let g:http_client_json_escape_utf=0
+let g:http_client_result_vsplit=0
+let http_client_focus_output_window=0
+let g:undotree_WindowLayout = 2
+let g:undotree_SetFocusWhenToggle = 1
+let g:undotree_DiffAutoOpen = 0
+set undofile
+set undodir^=~/.vim/undo//
+nnoremap <leader>lo :hide edit <cfile><cr>
