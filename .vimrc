@@ -13,6 +13,8 @@ set nowrap
 set splitbelow
 set history=100
 set nofoldenable
+" set noesckeys
+set ttimeoutlen=100
 nmap <Leader>/ :nohl<CR>
 syntax enable
 filetype plugin indent on
@@ -31,6 +33,7 @@ au FileType julia setlocal commentstring=#\ %s
 au FileType matlab setlocal commentstring=%\ %s
 au FileType fsharp setlocal commentstring=//\ %s
 au FileType c setlocal commentstring=//\ %s
+au FileType cpp setlocal commentstring=//\ %s
 au FileType idris setlocal commentstring=--\ %s
 au FileType mathematica setlocal commentstring=(*\ %s\ *)
 noremap n j
@@ -133,3 +136,7 @@ let g:undotree_DiffAutoOpen = 0
 set undofile
 set undodir^=~/.vim/undo//
 nnoremap <leader>lo :hide edit <cfile><cr>
+nnoremap <leader>on <c-]>
+runtime ftplugin/man.vim
+set keywordprg=:Man
+noremap Q :ccl<cr>

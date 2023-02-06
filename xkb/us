@@ -831,6 +831,7 @@ xkb_symbols "colemax" {
     key <AB09> { [       period,        colon,  dead_diaeresis,       asciitilde ] };
 
     key <CAPS> { [    Caps_Lock,    Caps_Lock,       Caps_Lock,        Caps_Lock ] };
+    key <SPCE> { [        space,        space,          Escape,     nobreakspace ] };
 
     include "level3(ralt_switch)"
 };
