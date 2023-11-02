@@ -1,3 +1,4 @@
+let no_racket_maps = 1
 let mapleader = "\<space>"
 let maplocalleader = "\<space>"
 set nocompatible
@@ -25,17 +26,12 @@ au BufNewFile,BufRead *.idr set filetype=idris
 au BufNewFile,BufRead *.jl set filetype=julia
 au BufNewFile,BufRead *.wl set filetype=mathematica
 au BufNewFile,BufRead *.prolog set filetype=prolog
-au BufNewFile,BufRead *.fs set filetype=fsharp
-au FileType prolog setlocal commentstring=%\ %s
-au FileType ly setlocal commentstring=%\ %s
-au FileType r setlocal commentstring=#\ %s
-au FileType julia setlocal commentstring=#\ %s
-au FileType matlab setlocal commentstring=%\ %s
-au FileType fsharp setlocal commentstring=//\ %s
-au FileType c setlocal commentstring=//\ %s
-au FileType cpp setlocal commentstring=//\ %s
+au BufNewFile,BufRead *.fs,*.fsx set filetype=fsharp
+au FileType prolog,ly,matlab setlocal commentstring=%\ %s
+au FileType r,julia setlocal commentstring=#\ %s
+au FileType c,fsharp,cpp setlocal commentstring=//\ %s
 au FileType idris setlocal commentstring=--\ %s
-au FileType mathematica setlocal commentstring=(*\ %s\ *)
+au FileType mathematica,sml setlocal commentstring=(*\ %s\ *)
 noremap n j
 noremap e k
 " noremap <c-n> <c-f>
@@ -51,9 +47,19 @@ noremap K N
 noremap N K
 nnoremap U <C-R>
 nnoremap <leader>H <c-w>H
+nnoremap <leader>h <c-w>h
 nnoremap <leader>N <c-w>J
+nnoremap <leader>n <c-w>j
 nnoremap <leader>E <c-w>K
+nnoremap <leader>e <c-w>k
 nnoremap <leader>I <c-w>L
+nnoremap <leader>i <c-w>l
+tnoremap <c-w>N <c-w>J
+tnoremap <c-w>n <c-w>j
+tnoremap <c-w>E <c-w>K
+tnoremap <c-w>e <c-w>k
+tnoremap <c-w>I <c-w>L
+tnoremap <c-w>i <c-w>l
 nnoremap <leader>lt :UndotreeToggle<cr>
 nnoremap <silent> [b :bprevious<cr>
 nnoremap <silent> ]b :bnext<cr>
@@ -100,8 +106,6 @@ endif
 noremap <leader>sq :DBResultsClose<cr>
 noremap <leader>ssp :silent !net stop MySQL57<cr>
 noremap <leader>sst :silent !net start MySQL57<cr>
-nnoremap <leader>n <C-W>w
-nnoremap <leader>e <C-W>W
 noremap <silent> <expr> ' "'".toupper(nr2char(getchar()))
 noremap <silent> <expr> m "m".toupper(nr2char(getchar()))
 sunmap '
@@ -115,7 +119,7 @@ let g:dbext_default_history_file = 'c:\Users\dgrenier\vimfiles\dbext_sql_history
 set shortmess+=I
 set encoding=utf-8
 set diffopt+=iwhite
-set errorformat=\ %#%f(%l\\\,%c):\ %m
+set efm=\ %#%f(%l\\\,%c):\ %m
 hi MatchParen cterm=underline ctermbg=none ctermfg=none
 vmap <C-e> :<C-u>@*<CR>
 colorscheme apprentice
